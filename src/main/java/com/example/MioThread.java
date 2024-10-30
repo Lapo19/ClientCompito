@@ -71,13 +71,14 @@ public class MioThread extends Thread{
                     quant=sc.nextLine();
                     out.writeBytes(quant+ "\n");
                     disp = in.readLine();
-                    System.out.println(disp);
                     
                     if(disp.equals("OK")){
                         System.out.println("Biglietti comprati con successo");
                     }
-                    else{
+                    else if(disp.equals("KO")){
                         System.out.println("Biglietti non sufficenti");
+                    }else{
+                        System.out.println("Tipo biglietto non esistente");
                     }
                         
                 }
